@@ -17,7 +17,8 @@
   <link href="css/camera.css" rel="stylesheet" />
   <link href="css/jquery.bxslider.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link href="css/wizard.css" rel="stylesheet" />
+
   <!-- Theme skin -->
   <link href="color/default.css" rel="stylesheet" />
 
@@ -27,7 +28,14 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
   <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
   <link rel="shortcut icon" href="ico/favicon.png" />
+<style>
 
+/* .table tr:first-child td{
+  background:#e96b56;
+  color: white;
+
+} */
+</style>
   <!-- =======================================================
     Theme Name: Eterna
     Theme URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
@@ -171,20 +179,37 @@
     <section id="content">
       <div class="container">
         <div class="row">
+          
           <div class="Span12">
             <div class="span12">
-             
-
-            <!-- ACCORDION HTML-->
               
-            <div id="accordion">
-              <h1>Client Information</h1>
-              <div>
-                <p>
+              
+              <div class="tabs">
+                  <div class="tab-button-outer">
+                    <ul id="tab-button">
+                      <li><a href="#tab01">Account Information</a></li>
+                      <li><a href="#tab02">Personal Information</a></li>
+                      <li><a href="#tab03">Interests</a></li>
+                      <!-- <li><a href="#tab04">Tab 4</a></li>
+                      <li><a href="#tab05">Tab 5</a></li> -->
+                    </ul>
+                  </div>
+                  <div class="tab-select-outer">
+                    <select id="tab-select">
+                      <option value="#tab01">Tab 1</option>
+                      <option value="#tab02">Tab 2</option>
+                      <option value="#tab03">Tab 3</option>
+                      <!-- <option value="#tab04">Tab 4</option>
+                      <option value="#tab05">Tab 5</option> -->
+                    </select>
+                  </div>
+                
+                  <div id="tab01" class="tab-contents">
+                    <div class="span12"></div>
                     <h4 class="title">Account Vitals<span></span></h4>
                     <table class="table table-bordered">
                         <thead>
-                          <tr style="background-color: #ececec">
+                          <tr style="background-color: #e96b56;color: white;">
                             <th>
                               Date of First Appointment
                             </th>
@@ -295,7 +320,7 @@
 
               <table class="table table-bordered">
                 <thead>
-                  <tr style="background-color: #ececec">
+                  <tr style="background-color: #e96b56;color: white;">
                     <th>
                       Last Name-Primary
                     </th>
@@ -372,7 +397,7 @@
               <h4 class="title">Address</h4>
               <table class="table table-bordered">
                 <thead>
-                  <tr style="background-color: #ececec">
+                  <tr style="background-color: #e96b56;color: white;">
                     <th>
                       Address
                     </th>
@@ -445,64 +470,64 @@
 
                 </tbody>
               </table>
-              <div>
-                <h4 class="title">Telephone</h4>
-                <i class="icon-plus"><span class="text-info" style="margin-left: 5px">Click Here to Add More
-                    Rows</span></i>
-              </div>
-
-              <table class="table table-bordered">
-                <thead>
-                  <tr style="background-color: #ececec">
-                    <th>
-                      Client
-                    </th>
-                    <th>
-                      Type
-                    </th>
-                    <th>
-                      Number
-                    </th>
-
-                  </tr>
-                </thead>
-                <tbody>
-
-                  <tr>
-                    <td>
-                      John Victor
-                    </td>
-                    <td>
-                      Estate
-                    </td>
-                    <td>
-                      (201) 677-8524
-                    </td>
-
-                  </tr>
-                  <tr>
-                    <td>
-                      Alan Cena
-                    </td>
-                    <td>
-                      Estate
-                    </td>
-                    <td>
-                      (201) 677-8524
-                    </td>
-
-                  </tr>
-
-                </tbody>
-              </table>
-              <p class="text-info">Click HERE for details about hobbies, beneficiaries and other personal
-                information</p>
-                </p>
-              </div>
-              <h3>Section 2</h3>
-              <div>
-                <p>
+                  </div>
+                  <div id="tab02" class="tab-contents">
+                   
                     <div>
+                        <h4 class="title">Telephone</h4>
+                        <i  class="icon-plus"><span id="btnadd" class="text-info" style="margin-left: 5px;cursor:pointer;">Click Here to Add More
+                            Rows</span></i>
+                      </div>
+        
+                      <table id="tblData" class="table table-bordered">
+                        <thead>
+                          <tr style="background-color: #e96b56;color: white;">
+                            <th>
+                              Client
+                            </th>
+                            <th>
+                              Type
+                            </th>
+                            <th>
+                              Number
+                            </th>
+                            <th>
+                              Actions
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+        
+                          <tr>
+                            <td>
+                              John Victor
+                            </td>
+                            <td>
+                              Estate
+                            </td>
+                            <td>
+                              (201) 677-8524
+                            </td>
+                            <td><button class='btn btn-theme btnSave' type='submit'>Save</button></td></td>
+                          </tr>
+                          <tr>
+                            <td>
+                              Alan Cena
+                            </td>
+                            <td>
+                              Estate
+                            </td>
+                            <td>
+                              (201) 677-8524
+                            </td>
+        <td><button class='btn btn-theme btnSave' type='submit'>Save</button></td></td>
+                          </tr>
+        
+                        </tbody>
+                      </table>
+                      <p class="text-info">Click HERE for details about hobbies, beneficiaries and other personal
+                        information</p>
+                      <div>
                         <h4 class="title">Email</h4>
                         <i class="icon-plus"><span class="text-info" style="margin-left: 5px">Click Here to Add More
                             Rows</span></i>
@@ -510,7 +535,7 @@
         
                       <table class="table table-bordered">
                         <thead>
-                          <tr style="background-color: #ececec">
+                          <tr style="background-color: #e96b56;color: white;">
                             <th>
                               Client-e
                             </th>
@@ -606,7 +631,7 @@
         
                       <table class="table table-bordered">
                         <thead>
-                          <tr style="background-color: #ececec">
+                          <tr style="background-color: #e96b56;color: white;">
                             <th>
                               Client
                             </th>
@@ -697,6 +722,8 @@
         
                         </tbody>
                       </table>
+                  </div>
+                  <div id="tab03" class="tab-contents">
                       <h4>Areas of Interest</h4>
                       <div class="row">
                         <div class="span5">
@@ -740,157 +767,144 @@
                           <span>8000$</span>
                         </div>
                       </div>
-                </p>
-              </div>
-              <h3>Section 3</h3>
-              <div>
-                <p>
-                    <h4>Product Mix</h4>
-                    <table class="table table-bordered">
-                      <thead>
-                        <tr style="background-color: #ececec">
-                          <th>
-                            Client
-                          </th>
-                          <th>
-                            Type
-                          </th>
-                          <th>
-                            Effective Date
-                          </th>
-                          <th>
-                            Carrier
-                          </th>
-                          <th>
-                            Product Name
-                          </th>
-                          <th>
-                            Premium Sold
-                          </th>
-                          <th>
-                            Surrender Period
-                          </th>
-                          <th>
-                            Resell Date
-                          </sth>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>
-                            230 Jan 2019
-                          </td>
-                          <td>
-                            Web
-                          </td>
-                          <td>
-                            Married
-                          </td>
-                          <td>
-                            234440$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            230 Jan 2019
-                          </td>
-                          <td>
-                            Web
-                          </td>
-                          <td>
-                            Married
-                          </td>
-                          <td>
-                            234440$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            230 Jan 2019
-                          </td>
-                          <td>
-                            Web
-                          </td>
-                          <td>
-                            Married
-                          </td>
-                          <td>
-                            234440$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                          <td>
-                            2000$
-                          </td>
-                        </tr>
-      
-                      </tbody>
-                    </table>
-                    <h4>Household Density</h4>
-                    <div class="row">
-                        <div class="span5">
-                          <ul>
-                            <li>Total Invested Here</li>
-                            <li>Density </li>
-                            
-                          </ul>
+                      <h4>Product Mix</h4>
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr style="background-color: #e96b56;color: white;">
+                            <th>
+                              Client
+                            </th>
+                            <th>
+                              Type
+                            </th>
+                            <th>
+                              Effective Date
+                            </th>
+                            <th>
+                              Carrier
+                            </th>
+                            <th>
+                              Product Name
+                            </th>
+                            <th>
+                              Premium Sold
+                            </th>
+                            <th>
+                              Surrender Period
+                            </th>
+                            <th>
+                              Resell Date
+                            </sth>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              230 Jan 2019
+                            </td>
+                            <td>
+                              Web
+                            </td>
+                            <td>
+                              Married
+                            </td>
+                            <td>
+                              234440$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              230 Jan 2019
+                            </td>
+                            <td>
+                              Web
+                            </td>
+                            <td>
+                              Married
+                            </td>
+                            <td>
+                              234440$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              230 Jan 2019
+                            </td>
+                            <td>
+                              Web
+                            </td>
+                            <td>
+                              Married
+                            </td>
+                            <td>
+                              234440$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                            <td>
+                              2000$
+                            </td>
+                          </tr>
+        
+                        </tbody>
+                      </table>
+                      <h4>Household Density</h4>
+                      <div class="row">
+                          <div class="span5">
+                            <ul>
+                              <li>Total Invested Here</li>
+                              <li>Density </li>
+                              
+                            </ul>
+                          </div>
+                          <div class="span5">
+                            <span>5000$</span><br>
+                            <span>3000$</span><br>
+                           
+                          </div>
                         </div>
-                        <div class="span5">
-                          <span>5000$</span><br>
-                          <span>3000$</span><br>
-                         
-                        </div>
-                      </div>
-                </p>
-                <!-- <ul>
-                  <li>List item one</li>
-                  <li>List item two</li>
-                  <li>List item three</li>
-                </ul> -->
-              </div>
-            
-            </div>
-
-            <!-- ACCORDION HTML END -->
-
+                  </div>
+                 
+                 
+                </div>
              
             </div>
             <div class="span12">
               
-           
+              
              
-           
+              
             </div>
           </div>
         </div>
@@ -991,15 +1005,77 @@
   <script src="js/jquery.flexslider.js"></script>
   <script src="js/animate.js"></script>
   <script src="js/inview.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <!-- Template Custom JavaScript File -->
   <script src="js/custom.js"></script>
   <script>
-    $(function () {
-      $("#accordion").accordion();
-    });
-  </script>
+ $(function () {
+   var $tabButtonItem = $('#tab-button li'),
+   $tabSelect = $('#tab-select'),
+   $tabContents = $('.tab-contents'),
+   activeClass = 'is-active';
 
+   $tabButtonItem.first().addClass(activeClass);
+   $tabContents.not(':first').hide();
+
+   $tabButtonItem.find('a').on('click', function (e) {
+     var target = $(this).attr('href');
+
+     $tabButtonItem.removeClass(activeClass);
+     $(this).parent().addClass(activeClass);
+     $tabSelect.val(target);
+     $tabContents.hide();
+     $(target).show();
+     e.preventDefault();
+   });
+
+   $tabSelect.on('change', function () {
+     var target = $(this).val(),
+     targetSelectNum = $(this).prop('selectedIndex');
+
+     $tabButtonItem.removeClass(activeClass);
+     $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+     $tabContents.hide();
+     $(target).show();
+   });
+ });
+
+ $(function(){
+    //Add, Save, Edit and Delete functions code
+    
+    $("#btnadd").bind("click", Add);
+});
+
+function Add(){
+    $("#tblData tbody").append(
+        "<tr>"+
+        "<td><input type='text'/></td>"+
+        "<td><input type='text'/></td>"+
+        "<td><input type='text'/></td>"+
+        "<td><button class='btn btn-theme btnSave' type='submit'>Save</button></td>"+
+        "</tr>");
+     
+        $(".btnSave").bind("click", Save);      
+        
+};
+
+function Save(){
+    var par = $(this).parent().parent(); //tr
+    var tdName = par.children("td:nth-child(1)");
+    var tdPhone = par.children("td:nth-child(2)");
+    var tdEmail = par.children("td:nth-child(3)");
+    // var tdButtons = par.children("td:nth-child(4)");
+ 
+    tdName.html(tdName.children("input[type=text]").val());
+    tdPhone.html(tdPhone.children("input[type=text]").val());
+    tdEmail.html(tdEmail.children("input[type=text]").val());
+   // tdButtons.html("<img src='images/delete.png' class='btnDelete'/><img src='images/pencil.png' class='btnEdit'/>");
+   
+    // $(".btnEdit").bind("click", Edit);
+    // $(".btnDelete").bind("click", Delete);
+};
+  </script>
+  
 </body>
 
 </html>
